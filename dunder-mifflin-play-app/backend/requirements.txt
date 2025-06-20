@@ -1,0 +1,8 @@
+Flask
+SQLAlchemy
+psycopg2-binary
+Faker
+python-dotenv
+requests
+gunicorn
+flask-cors

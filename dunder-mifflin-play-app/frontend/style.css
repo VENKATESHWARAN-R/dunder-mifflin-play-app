@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 3px;
+    white-space: pre-wrap; /* Allow wrapping */
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+input[type="number"], input[type="text"] {
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#addResult, #seedResult {
+    margin-top: 10px;
+    font-weight: bold;
+}
