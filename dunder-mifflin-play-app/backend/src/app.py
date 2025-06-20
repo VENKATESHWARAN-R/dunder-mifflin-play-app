@@ -73,6 +73,5 @@ def add_user_subscription(user_id):
 
 if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
-    Base.metadata.create_all(bind=engine)
     port = int(os.getenv("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
