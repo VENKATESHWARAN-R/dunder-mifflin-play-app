@@ -4,12 +4,12 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'frontend/**'
+      - 'dunder-mifflin-play-app/frontend/**'
       - '.github/workflows/frontend-ci-cd.yml'
   pull_request:
     branches: [ main ]
     paths:
-      - 'frontend/**'
+      - 'dunder-mifflin-play-app/frontend/**'
       - '.github/workflows/frontend-ci-cd.yml'
   workflow_dispatch:
     inputs:
@@ -42,14 +42,14 @@ jobs:
         npm install -g eslint
 
     - name: Validate HTML
-      working-directory: ./frontend
+      working-directory: ./dunder-mifflin-play-app/frontend
       run: |
         echo "Validating HTML..."
         htmlhint index.html || echo "HTML has issues that should be fixed"
         echo "✅ HTML validation passed"
 
     - name: Validate CSS
-      working-directory: ./frontend
+      working-directory: ./dunder-mifflin-play-app/frontend
       run: |
         echo "Validating CSS..."
         echo '{"extends": "stylelint-config-standard"}' > .stylelintrc.json
@@ -57,7 +57,7 @@ jobs:
         echo "✅ CSS validation passed"
 
     - name: Validate JavaScript
-      working-directory: ./frontend
+      working-directory: ./dunder-mifflin-play-app/frontend
       run: |
         echo "Validating JavaScript..."
         echo '{"parserOptions": {"ecmaVersion": 2021}, "env": {"browser": true}, "extends": "eslint:recommended"}' > .eslintrc.json
@@ -65,7 +65,7 @@ jobs:
         echo "✅ JavaScript validation passed"
 
     - name: Build Docker image
-      working-directory: ./frontend
+      working-directory: ./dunder-mifflin-play-app/frontend
       run: |
         docker build -t dunder-mifflin-frontend .
         
@@ -163,7 +163,7 @@ jobs:
     #     REGION: ${{ secrets.GCP_REGION }}
     #     REPO: ${{ secrets.GCP_REPO }}
     #   run: |
-    #     docker buildx build --platform linux/amd64 -t $REGION-docker.pkg.dev/$PROJECT/$REPO/frontend:${{ github.sha }} ./frontend
+    #     docker buildx build --platform linux/amd64 -t $REGION-docker.pkg.dev/$PROJECT/$REPO/frontend:${{ github.sha }} ./dunder-mifflin-play-app/frontend
     #     docker push $REGION-docker.pkg.dev/$PROJECT/$REPO/frontend:${{ github.sha }}
     
     # - name: Deploy to Cloud Run
