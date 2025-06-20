@@ -1,6 +1,6 @@
 # Dunder Mifflin Play App
 
-A containerized microservice application that simulates a subscription management system for a streaming service (similar to Netflix). The application consists of a frontend interface, a RESTful backend API, and a PostgreSQL database.
+A containerized microservice application that simulates a subscription management system for a streaming service. The application consists of a frontend interface, a RESTful backend API, and a PostgreSQL database.
 
 ## Overview
 
